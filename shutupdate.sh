@@ -2,7 +2,7 @@
 
 SHUTDOWN=0
 REBOOT=0
-DELAY=0
+#DELAY=0
 
 # Check if root
 if [ "$UID" -ne 0 ]; then
@@ -42,7 +42,7 @@ then
     DELAY=0
 fi
 
-echo "System will wait for $DELAY seconds after update"
+echo "System will wait for $DELAY second(s) after update"
 
 # The part where you update and upgrade
 aptitude update && aptitude full-upgrade -y
